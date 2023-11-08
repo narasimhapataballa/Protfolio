@@ -1,0 +1,140 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/db063882e0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="" class="logo">
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#Portfolio">Portfolio</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p></p>
+            <h1>Hi, I'm <span>Narasimha</span><br>From SRKR Engineering College</h1>
+        </div>
+    </div>
+</div>
+<!-------------about------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="Images/photo-output.png" >
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About me</h1>
+                <p>I am a highly motivated and results-driven software engineer with a strong passion where i can upskill my knowledge and contribute to an Organisation .  I am constantly seeking new challenges to further expand my knowledge</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">experience</p>
+                    <p class="tab-links" onclick="opentab('education')">education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Python</span><br>Intermediate</li>
+                        <li><span>Web Development</span><br>HTML,CSS</li>
+                        <li><span>Data Structures & DBMS</span><br>Concepts & Algorithms</li>
+                        <li><span>Machine Learning & Deep Learning</span><br>Concepts & Algorithms</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Intern on AWS </span><br>BlackBuck 06/2023 - 08/2023</li>
+                        <li><span>Intern on AIML & DS</span><br>Henotic Technologies 07/2022 - 09/2022</li>
+                        <li><span>Intern on Web Development </span><br>Raise Digital 01/2022 - 03/2022</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2020-2024</span><br>Electrical & Electronics Engineering - 8.05 CGPA</li>
+                        <li><span>2018-2020</span><br>Intermediate - 9.8 CGPA</li>
+                        <li><span>2017-2018</span><br>Secondary School of Education - 9.8 CGPA</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>    
+</div>
+<!-------portfolio------>
+<div id="Portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="Images/work-1.png">
+                <div class="layer">
+                    <h3>Intern on AWS</h3>
+                    <p>Learn how to set up, configure, and manage AWS services like EC2 instances, S3 buckets, RDS databases, and VPCs. Create and maintain virtual environments and explore different services for infrastructure management.</p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="Images/work-2.png">
+                <div class="layer">
+                    <h3>Intern on AIML & DS</h3>
+                    <p>Engaged in a comprehensive internship focusing on the applications of Artificial Intelligence and 
+                        Machine Learning (AIML) and Data Science (DS)
+                        </p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="Images/work-3.png">
+                <div class="layer">
+                    <h3>Intern on Web Development</h3>
+                    <p>Completed a web development internship where I played a pivotal role in designing and building 
+a single-page e-commerce website.</p>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+</div>
+<!---------contact------->
+<div id="Contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i> naidupataballa@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> 9603974999</p>
+                <div class="Social-icons">
+                    <a href="https://www.linkedin.com/in/narasimha-pataballa-966024229"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://instagram.com/__narasimha__22?igshid=YjAzcXkzeTIyYmw3&utm_source=qr"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+                <a href="Images/Narasimha Resume .pdf" download class="btn btn2">Download Resume</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for (tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+</body>
+</html>
